@@ -4,7 +4,10 @@ DLL := bin/mem.dll
 INCFLAGS := -IAPI
 LINKFLAGS := -Lbin -lmem
 
-all: $(BIN)
+all: dirs $(BIN)
+
+dirs:
+	@mkdir -p bin
 
 $(BIN): $(DLL) test/main.c 
 	$(CC) test/main.c -g -o $(BIN) $(INCFLAGS) $(LINKFLAGS)
