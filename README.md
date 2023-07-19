@@ -1,1 +1,1 @@
-Make sure to have a bin/ folder before you run the makefile - Matthew 19/07/23
+An attempt at making a general purpose dynamic array data structure that is both memory safe and identical to the use of a normal array in C.
