@@ -7,7 +7,7 @@ LINKFLAGS := -Lbin -lmem
 all: dirs $(BIN)
 
 dirs:
-	@mkdir -p bin
+	-@mkdir -p bin
 
 $(BIN): $(DLL) test/main.c 
 	$(CC) test/main.c -g -o $(BIN) $(INCFLAGS) $(LINKFLAGS)
